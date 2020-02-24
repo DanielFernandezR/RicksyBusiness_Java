@@ -10,7 +10,7 @@ public class CrystalExpender implements GuestDispatcher {
 		this.itemCost = itemCost;
 	}
 
-	private int stock() {
+	public int stock() {
 		return this.stock;
 	}
 

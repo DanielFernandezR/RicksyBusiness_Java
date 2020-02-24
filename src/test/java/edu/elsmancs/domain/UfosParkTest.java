@@ -27,7 +27,6 @@ public class UfosParkTest {
 
 		for (String ovni : ufosID) {
 			prueba.add(ovni);
-
 			prueba.dispatch(tarjeta);
 			assertEquals("primero", prueba.getUfoOf(tarjeta.number()));
 		}
