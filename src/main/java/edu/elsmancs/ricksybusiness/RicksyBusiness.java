@@ -1,5 +1,7 @@
 package edu.elsmancs.ricksybusiness;
 
+import java.util.List;
+
 import edu.elsmancs.domain.CreditCard;
 import edu.elsmancs.domain.CrystalExpender;
 import edu.elsmancs.domain.Receptivo;
@@ -192,19 +194,18 @@ public class RicksyBusiness {
 		 * pedidos y la lista de invitados/as que han hecho un pedido.
 		 */
 
-		RickMenu rickMenu = new RickMenu(100, 10);
+		RickMenu rickMenu = new RickMenu();
 		receptivo.registra(rickMenu);
-		receptivo.dispatch(abradolph);
-		receptivo.dispatch(squanchy);
-		receptivo.dispatch(morty);
-		receptivo.dispatch(gearHead);
-		receptivo.dispatch(birdpearson);
-		System.out.println(rickMenu);
-		System.out.println(abradolph);
-		System.out.println(squanchy);
-		System.out.println(morty);
-		System.out.println(gearHead);
-		System.out.println(birdpearson);
+		List<CreditCard> invitados = List.of(abradolph, squanchy, morty, gearHead, birdpearson);
+
+		for (CreditCard invitado : invitados) {
+			receptivo.dispatch(invitado);
+		}
+		System.out.println("\nPedidos de RickMenus:\n" + "=====================" + "\n" + "stock: " + rickMenu.stock());
+		System.out.println("\nCreditos de los invitados/as:\n" + "======================" + "\n");
+		for (CreditCard invitado : invitados) {
+			System.out.println(invitado);
+		}
 	}
 
 	private static void mostrarReserva(CreditCard card, CrystalExpender expender, UfosPark ufos) {

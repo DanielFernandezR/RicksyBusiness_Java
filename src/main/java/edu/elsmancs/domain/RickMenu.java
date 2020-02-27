@@ -1,13 +1,14 @@
 package edu.elsmancs.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class RickMenu implements GuestDispatcher {
 
-	private int stock = 0;
-	private double costMenu = 10;
+	private int stock = 100;
+	private final double costMenu = 10;
 
-	public RickMenu(int stock, double costMenu) {
-		this.stock = stock;
-		this.costMenu = costMenu;
+	public RickMenu() {
 	}
 
 	@Override
@@ -17,12 +18,13 @@ public class RickMenu implements GuestDispatcher {
 		}
 	}
 
-	private int stock() {
+	public int stock() {
 		return this.stock;
 	}
 
+	@Override
 	public String toString() {
-		return ("\nPedidos de RickMenus:\n" + "===============" + "\n" + "stock: " + stock() + "\n");
+		List<GuestDispatcher> ListofGuests = new ArrayList<GuestDispatcher>();
+		return ListofGuests.toString();
 	}
-
 }

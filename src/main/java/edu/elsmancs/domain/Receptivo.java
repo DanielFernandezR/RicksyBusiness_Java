@@ -15,8 +15,8 @@ public class Receptivo {
 	}
 
 	public void dispatch(CreditCard invitado) {
-		for (GuestDispatcher invitadoFiesta : observers) {
-			invitadoFiesta.dispatch(invitado);
+		for (GuestDispatcher accionFiesta : observers) {
+			accionFiesta.dispatch(invitado);
 		}
 	}
 }
