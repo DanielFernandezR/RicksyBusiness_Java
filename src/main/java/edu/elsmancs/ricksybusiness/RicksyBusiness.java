@@ -9,6 +9,8 @@ import edu.elsmancs.domain.RickMenu;
 import edu.elsmancs.domain.UfosPark;
 
 /**
+ * CÓDIGO DE MAIN PROPORCIONADO POR EL TUTOR
+ * 
  * Ricksy Business =============== Rick se queda a cargo Morty y Summer, y
  * celebra una pedazo de fiesta. Entre los invitados hay adolescentes, aliens,
  * Gearhead, Squanchy, Birdpearson y Abradolph Lincler (una combinación de DNA
