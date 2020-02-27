@@ -45,10 +45,4 @@ public class UfosPark implements GuestDispatcher {
 		List<String> ListofKeys = new ArrayList<String>(flota.keySet());
 		return ListofKeys.toString();
 	}
-
-	// Testing
-	Map<String, String> getFlota() {
-		return this.flota;
-	}
-
 }
