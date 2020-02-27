@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Receptivo {
 
-	private List<GuestDispatcher> observers = new ArrayList<>();
+	private List<GuestDispatcher> observers = new ArrayList<GuestDispatcher>();
 
 	public Receptivo() {
 	};

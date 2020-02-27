@@ -20,6 +20,7 @@ public class CreditCard {
 		return this.credit;
 	}
 
+	@Override
 	public String toString() {
 		return "owner: " + this.owner + "\n" + "number: " + number() + "\n" + "credit: " + credit() + this.Symbol;
 	}
