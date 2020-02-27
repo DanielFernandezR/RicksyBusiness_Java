@@ -14,13 +14,14 @@ public class CrystalExpender implements GuestDispatcher {
 		return this.stock;
 	}
 
+	@Override
 	public String toString() {
 		return "stock: " + stock() + "\n" + "cost: " + this.itemCost;
 	}
 
 	@Override
 	public void dispatch(CreditCard invitado) {
-		if (invitado.pay(itemCost) && stock() > 0) {
+		if (stock() > 0 && invitado.pay(itemCost)) {
 			this.stock -= 1;
 		}
 	}
